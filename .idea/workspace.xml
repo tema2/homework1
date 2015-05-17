@@ -6,8 +6,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c11adb-b3be-4b4a-9ca8-62b17c68ad8f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/project/test/TodoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/project/test/TodoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431887751153.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431887940800.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431888145990.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431888247349.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431888803093.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889105808.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889691253.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889734467.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889821063.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889922328.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431890644278.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431890800626.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431892682928.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431894578940.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431894664820.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431895323978.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431896182293.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431896396724.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431896465216.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/com/project/test/TodoCompleteTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431887751153.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431887940800.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431888145990.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431888247349.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431888803093.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889105808.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889691253.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889734467.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889821063.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431889922328.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431890644278.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431890800626.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431892682928.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431894578940.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431894664820.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431895323978.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431896182293.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431896396724.0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1431896465216.0.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/project/test/TodoCompleteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/project/test/TodoCompleteTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="todo_mvc_tests.iws" />
@@ -41,14 +79,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TodoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/project/test/TodoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15384616">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#496#497#0" expanded="true" />
                 <element signature="e#554#555#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TodoCompleteTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/project/test/TodoCompleteTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9230769">
+              <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +131,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/project/test/TodoTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/project/test/TodoCompleteTest.java" />
       </list>
     </option>
   </component>
@@ -202,7 +258,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.TodoTest">
+  <component name="RunManager" selected="JUnit.TodoCompleteTest">
     <configuration default="false" name="TodoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -243,6 +299,32 @@
       <option name="MAIN_CLASS_NAME" value="com.project.test.TodoTest" />
       <option name="METHOD_NAME" value="testCreateTask" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TodoCompleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.project.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="todo_mvc_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.project.test" />
+      <option name="MAIN_CLASS_NAME" value="com.project.test.TodoCompleteTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -402,14 +484,16 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TodoTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TodoTest.testCreateTask" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TodoCompleteTest" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TodoTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TodoTest.testCreateTask" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TodoCompleteTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TodoTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TodoTest.testCreateTask" />
       </list>
     </recent_temporary>
   </component>
@@ -467,7 +551,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -488,6 +574,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -507,6 +594,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -526,6 +614,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -545,6 +634,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="27" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -564,6 +654,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -583,6 +674,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -602,6 +694,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -621,6 +714,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -640,6 +734,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -659,6 +754,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -678,6 +774,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -697,6 +794,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -716,6 +814,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -735,6 +834,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -754,6 +854,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -773,6 +874,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
           </folding>
@@ -803,11 +905,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/project/test/TodoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15384616">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#496#497#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/project/test/TodoCompleteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9230769">
+          <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
           </folding>
         </state>
       </provider>
