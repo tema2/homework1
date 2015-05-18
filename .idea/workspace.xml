@@ -5,14 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/java/com/project/test/homework1/TodoTest.java" line="11" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c11adb-b3be-4b4a-9ca8-62b17c68ad8f" name="Default" comment="all">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_3.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/project/test/TodoCompleteTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/project/test/TodoTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/project/test/homework2/TodoCompleteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/project/test/homework2/TodoCompleteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/project/test/homework3/TodoSeparateFilters.java" afterPath="$PROJECT_DIR$/src/test/java/com/project/test/homework3/TodoSeparateFilters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_mvc_tests.iml" afterPath="$PROJECT_DIR$/todo_mvc_tests.iml" />
+    <list default="true" id="f1c11adb-b3be-4b4a-9ca8-62b17c68ad8f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="todo_mvc_tests.iws" />
@@ -592,7 +585,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431969665018</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="allure plugins added;&#10;homework2 updated;">
+      <created>1431980059950</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1431980059950</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -647,7 +646,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="homework 2, version 2&#10;methods added for:&#10;toggle&#10;delete&#10;&#10;changed filters methods" />
     <MESSAGE value="homework 2, version 2&#10;methods added for:&#10;toggle&#10;delete&#10;changed filters methods&#10;&#10;homework 3 template added" />
-    <option name="LAST_COMMIT_MESSAGE" value="homework 2, version 2&#10;methods added for:&#10;toggle&#10;delete&#10;changed filters methods&#10;&#10;homework 3 template added" />
+    <MESSAGE value="allure plugins added;&#10;homework2 updated;" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure plugins added;&#10;homework2 updated;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
