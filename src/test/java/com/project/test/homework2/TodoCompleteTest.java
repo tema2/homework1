@@ -1,4 +1,4 @@
-package com.project.test;
+package com.project.test.homework2;
 
 import com.codeborne.selenide.ElementsCollection;
 import org.junit.Test;
@@ -17,8 +17,8 @@ public class TodoCompleteTest {
         $("#new-todo").setValue(task).pressEnter();
     }
 
-    public void filterAll(){
-       // $("[href='#/'").click();
+    public void filterAll() {
+        // $("[href='#/'").click();
         $(By.linkText("All")).click();
     }
 

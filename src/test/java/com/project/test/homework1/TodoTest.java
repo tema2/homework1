@@ -1,4 +1,4 @@
-package com.project.test;
+package com.project.test.homework1;
 
 import com.codeborne.selenide.ElementsCollection;
 import org.junit.Test;
