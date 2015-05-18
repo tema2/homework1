@@ -472,7 +472,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431968046376</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="homework 2, version 2&#10;methods added for:&#10;toggle&#10;delete&#10;&#10;changed filters methods">
+      <created>1431968057774</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1431968057774</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
