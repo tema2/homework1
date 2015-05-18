@@ -1,11 +1,14 @@
 package com.project.test.homework2;
 
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.CollectionCondition.texts;
+import static com.codeborne.selenide.Condition.disappear;
+import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -18,18 +21,15 @@ public class TodoCompleteTest {
     }
 
     public void filterAll() {
-        // $("[href='#/'").click();
-        $(By.linkText("All")).click();
+        $("[href='#/']").click();
     }
 
     public void filterActive(){
-        // $("[href='#/active'").click();
-        $(By.linkText("Active")).click();
+        $("[href='#/active']").click();
     }
 
     public void filterCompleted(){
-        $(By.linkText("Completed")).click();
-        //  $("[href='#/completed'").click();
+        $("[href='#/completed']").click();
     }
 
     public void toggle(String task) {
@@ -41,7 +41,18 @@ public class TodoCompleteTest {
         taskList.findBy(text(task)).find(".destroy").click();
     }
 
+    public void clearCompleted(){
+        clearCompleted.click();
+        clearCompleted.should(disappear);
+    }
+
+    public void toggleAll() {
+        $("#toggle-all").click();
+    }
+
     ElementsCollection taskList = $$("#todo-list>li");
+    SelenideElement clearCompleted = $("#clear-completed");
+
 
     /* добавить проверку счетчика
     public static void checkItemsLeftCounter(int number){
@@ -116,7 +127,7 @@ public class TodoCompleteTest {
         taskList.shouldHave(texts("", "", "", "", "", "active1", "active2", "completed1", "completed2"));
         deleteTask("active1");
         deleteTask("completed1");
-        $("#clear-completed").click();
+        clearCompleted();
         taskList.shouldHave(texts("", "", "", "", ""));
 
         //complete from Active
@@ -135,7 +146,7 @@ public class TodoCompleteTest {
         //delete completed from Active
         filterActive();
         toggle("do3");
-        $("#clear-completed").click();
+        clearCompleted();
         filterCompleted();
         taskList.shouldHave(texts("", ""));
 
@@ -153,13 +164,13 @@ public class TodoCompleteTest {
 
         //mark all as completed
         filterAll();
-        $("#toggle-all").click();
+        toggleAll();
         taskList.shouldHave(texts("do1", "do2"));
         filterActive();
         taskList.shouldHave(texts("", ""));
         filterCompleted();
         taskList.shouldHave(texts("do1", "do2"));
-        $("#clear-completed").click();
+        clearCompleted();
         taskList.shouldBe(empty);
 
         //mark all as completed-2
@@ -176,11 +187,11 @@ public class TodoCompleteTest {
         taskList.shouldHave(texts("task1", "task2"));
         filterActive();
         taskList.shouldHave(texts("task1", ""));
-        $("#toggle-all").click();
+        toggleAll();
         taskList.shouldHave(texts("", ""));
         filterCompleted();
         taskList.shouldHave(texts("task1", "task2"));
-        $("#toggle-all").click();
+        toggleAll();
         taskList.shouldHave(texts("", ""));
         filterActive();
         taskList.shouldHave(texts("task1", "task2"));
