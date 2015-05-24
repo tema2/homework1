@@ -1,16 +1,10 @@
 package com.project.test.homework3;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.Step;
-
-import static com.codeborne.selenide.Selenide.executeJavaScript;
-import static com.codeborne.selenide.Selenide.open;
-
 public class TodoSeparateFilters {
-  /*  @BeforeClass
+/*    @BeforeClass
+    public void clearCache() {
         open("http://todomvc.com/examples/troopjs_require/#/");
+    }
 
     @Before
     public void clearData() {
@@ -19,20 +13,21 @@ public class TodoSeparateFilters {
         open("http://todomvc.com/examples/troopjs_require/#/");
     }
 
-/*    @Test
+    @Test
     public void testAtAllFilter() {
-        //test set 1
         @Step
-    }
+        //test set 1
+            }
 
     @Test
     public void testAtActiveFilter() {
+        @Step
         //test set 2
     }
 
     @Test
     public void testAtCompletedFilter() {
+        @Step
         //test set 3
-    }
-*/
+    } */
 }

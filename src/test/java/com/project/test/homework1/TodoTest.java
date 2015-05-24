@@ -15,7 +15,6 @@ public class TodoTest {
     public void addTask(String task) {
         $("#new-todo").setValue(task).pressEnter();
     }
-
     ElementsCollection taskList = $$("#todo-list>li");
 
     @Test

@@ -3,16 +3,11 @@ package com.project.test.homework2;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
-import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.CollectionCondition.empty;
-import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.disappear;
-import static com.codeborne.selenide.Condition.hidden;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
 
 public class TodoCompleteTest {
 
@@ -41,6 +36,11 @@ public class TodoCompleteTest {
         taskList.findBy(text(task)).find(".destroy").click();
     }
 
+    public void editTask(String oldTask, String newTask) {
+        taskList.findBy(text(oldTask)).find("label").doubleClick();
+        taskList.findBy(cssClass("editing")).find(".edit").setValue(newTask).pressEnter();
+        }
+
     public void clearCompleted(){
         clearCompleted.click();
         clearCompleted.should(disappear);
@@ -50,15 +50,12 @@ public class TodoCompleteTest {
         $("#toggle-all").click();
     }
 
-    ElementsCollection taskList = $$("#todo-list>li");
-    SelenideElement clearCompleted = $("#clear-completed");
-
-
-    /* добавить проверку счетчика
     public static void checkItemsLeftCounter(int number){
         $("#todo-count>strong").shouldHave(exactText(Integer.toString(number)));
     }
-     */
+
+    ElementsCollection taskList = $$("#todo-list li");
+    SelenideElement clearCompleted = $("#clear-completed");
 
     @Test
     public void testCreateTask() {
@@ -70,49 +67,69 @@ public class TodoCompleteTest {
         addTask("do3");
         addTask("do4");
         addTask("do5");
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5"));
-        //marking task 1 and 2 as completed and checking that total number of tasks is 5
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
+        checkItemsLeftCounter(5);
+        clearCompleted.shouldBe(hidden);
+
+        //marking task 1 and 2 as completed and checking that total number of tasks on filter All is 5
         toggle("do1");
         toggle("do2");
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
+        checkItemsLeftCounter(3);
+        clearCompleted.shouldBe(visible);
+
         //checking active tasks on Active filter
         filterActive();
-        taskList.shouldHave(texts("", "", "do3", "do4", "do5"));
+        taskList.filter(visible).shouldHave(exactTexts("do3", "do4", "do5"));
+        checkItemsLeftCounter(3);
+        clearCompleted.shouldBe(visible);
+
         //checking completed tasks on Completed filter
         filterCompleted();
-        taskList.shouldHave(texts("do1", "do2", "", "", ""));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
+        checkItemsLeftCounter(3);
 
         //marking third task as completed and checking filters
         filterAll();
         toggle("do3");
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
+        checkItemsLeftCounter(2);
         filterActive();
-        taskList.shouldHave(texts("", "", "", "do4", "do5"));
+        taskList.filter(visible).shouldHave(exactTexts("do4", "do5"));
+        checkItemsLeftCounter(2);
         filterCompleted();
-        taskList.shouldHave(texts("do1", "do2", "do3", "", ""));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3"));
+        checkItemsLeftCounter(2);
 
         //adding tasks on Active filter page
         filterActive();
         addTask("active1");
         addTask("active2");
-        taskList.shouldHave(texts("", "", "", "do4", "do5", "active1", "active2"));
+        taskList.filter(visible).shouldHave(exactTexts("do4", "do5", "active1", "active2"));
+        checkItemsLeftCounter(4);
+
         //checking that two new tasks does not appeared on Completed filter and presented on All filter
         filterCompleted();
-        taskList.shouldHave(texts("do1", "do2", "do3", "", "", "", ""));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3"));
+        checkItemsLeftCounter(4);
         filterAll();
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5", "active1", "active2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5", "active1", "active2"));
+        checkItemsLeftCounter(4);
 
         //adding tasks on Completed filter page, checking that they are not presented there
         filterCompleted();
         addTask("completed1");
         addTask("completed2");
-        taskList.shouldHave(texts("do1", "do2", "do3", "", "", "", "", "", ""));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3"));
+        checkItemsLeftCounter(6);
         filterActive();
-        taskList.shouldHave(texts("", "", "", "do4", "do5", "active1", "active2", "completed1", "completed2"));
+        taskList.filter(visible).shouldHave(exactTexts("do4", "do5", "active1", "active2", "completed1", "completed2"));
+        checkItemsLeftCounter(6);
         filterAll();
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5", "active1", "active2", "completed1", "completed2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5", "active1", "active2", "completed1", "completed2"));
+        checkItemsLeftCounter(6);
 
-        //rechecking tasks, as a result do1-3 marked as active, active1-2, completed1-2 are marked as completed
+        //rechecking tasks, as a result do1-5 marked as active, active1-2, completed1-2 are marked as completed
         toggle("do1");
         toggle("do2");
         toggle("do3");
@@ -120,58 +137,63 @@ public class TodoCompleteTest {
         toggle("active2");
         toggle("completed1");
         toggle("completed2");
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5", "active1", "active2", "completed1", "completed2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5", "active1", "active2", "completed1", "completed2"));
+        checkItemsLeftCounter(5);
 
         //deleting completed tasks from Completed filter
         filterCompleted();
-        taskList.shouldHave(texts("", "", "", "", "", "active1", "active2", "completed1", "completed2"));
+        taskList.filter(visible).shouldHave(exactTexts("active1", "active2", "completed1", "completed2"));
         deleteTask("active1");
         deleteTask("completed1");
         clearCompleted();
-        taskList.shouldHave(texts("", "", "", "", ""));
+        taskList.filter(visible).shouldBe(empty);
+        checkItemsLeftCounter(5);
 
         //complete from Active
         filterActive();
-        taskList.shouldHave(texts("do1", "do2", "do3", "do4", "do5"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
         toggle("do4");
         toggle("do5");
-        taskList.shouldHave(texts("do1", "do2", "do3", "", ""));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3"));
+        checkItemsLeftCounter(3);
 
         //delete completed one by one from All
         filterAll();
         deleteTask("do4");
         deleteTask("do5");
-        taskList.shouldHave(texts("do1", "do2", "do3"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3"));
+        checkItemsLeftCounter(3);
 
         //delete completed from Active
         filterActive();
         toggle("do3");
         clearCompleted();
         filterCompleted();
-        taskList.shouldHave(texts("", ""));
+        taskList.filter(visible).shouldBe(empty);
+        checkItemsLeftCounter(2);
 
         //renew task from completed
         filterAll();
         toggle("do2");
         filterCompleted();
-        taskList.shouldHave(texts("", "do2"));
+        taskList.filter(visible).shouldHave(exactTexts("do2"));
         toggle("do2");
-        taskList.shouldHave(texts("", ""));
+        taskList.filter(visible).shouldBe(empty);
         filterAll();
-        taskList.shouldHave(texts("do1", "do2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
         filterActive();
-        taskList.shouldHave(texts("do1", "do2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
 
         //mark all as completed
         filterAll();
         toggleAll();
-        taskList.shouldHave(texts("do1", "do2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
         filterActive();
-        taskList.shouldHave(texts("", ""));
+        taskList.filter(visible).shouldBe(empty);
         filterCompleted();
-        taskList.shouldHave(texts("do1", "do2"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
         clearCompleted();
-        taskList.shouldBe(empty);
+        taskList.filter(visible).shouldBe(empty);
 
         //mark all as completed-2
         /*  Тут я і знайшов дефект. Якщо видалити всі задачі знаходячись у фільтрі Completed,
@@ -184,21 +206,37 @@ public class TodoCompleteTest {
         addTask("task2");
         filterAll();
         toggle("task2");
-        taskList.shouldHave(texts("task1", "task2"));
+        taskList.filter(visible).shouldHave(exactTexts("task1", "task2"));
+        checkItemsLeftCounter(1);
         filterActive();
-        taskList.shouldHave(texts("task1", ""));
+        taskList.filter(visible).shouldHave(exactTexts("task1"));
         toggleAll();
-        taskList.shouldHave(texts("", ""));
+        taskList.filter(visible).shouldBe(empty);
         filterCompleted();
-        taskList.shouldHave(texts("task1", "task2"));
+        taskList.filter(visible).shouldHave(exactTexts("task1", "task2"));
         toggleAll();
-        taskList.shouldHave(texts("", ""));
+        taskList.filter(visible).shouldBe(empty);
         filterActive();
-        taskList.shouldHave(texts("task1", "task2"));
+        taskList.filter(visible).shouldHave(exactTexts("task1", "task2"));
+        checkItemsLeftCounter(2);
 
         //edit task...
+        filterAll();
+        editTask("task1", "task1 edited");
+        checkItemsLeftCounter(2);
+        filterActive();
+        editTask("task2", "task2 edited");
+        checkItemsLeftCounter(2);
 
         //edit completed task
+        toggle("task2 edited");
+        checkItemsLeftCounter(1);
+        filterCompleted();
+        editTask("task2 edited", "task2");
+        toggle("task2");
+        taskList.filter(visible).shouldBe(empty);
+        filterAll();
+        taskList.filter(visible).shouldHave(exactTexts("task1 edited", "task2"));
 
     }
 }
