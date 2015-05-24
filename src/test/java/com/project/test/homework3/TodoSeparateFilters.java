@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
@@ -15,14 +16,14 @@ import static com.project.test.TestMethods.*;
 
 public class TodoSeparateFilters {
     @BeforeClass
-    public void clearCache() {
+    public static void clearCache() {
         open("http://todomvc.com/examples/troopjs_require/#/");
     }
 
     @Before
     public void clearData() {
         executeJavaScript("localStorage.clear()");
-        open("http://todomvc.com/");
+        open("http://google.com/");
         open("http://todomvc.com/examples/troopjs_require/#/");
     }
 
@@ -59,23 +60,26 @@ public class TodoSeparateFilters {
 
         //toggling all
         toggleAll();
-        taskList.filter(visible).shouldBe(exactTexts("do1", "do2", "do3", "do4", "do5"));
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
         checkCompletedCounter(5);
+        checkItemsLeftCounter(0);
         toggleAll();
+
+        //edit task
+        editTask("do3", "do3 edited");
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3 edited", "do4", "do5"));
 
         //delete task
         deleteTask("do5");
         deleteTask("do4");
         checkItemsLeftCounter(3);
-        checkCompletedCounter(2);
+        clearCompleted.shouldBe(hidden);
 
         //clear completed
+        toggleAll();
         clearCompleted();
-        checkItemsLeftCounter(3);
+        itemsLeft.shouldBe(hidden);
         clearCompleted.shouldBe(hidden);
-        itemsLeft.shouldBe(visible);
-
-        
 
     }
 
@@ -115,18 +119,37 @@ public class TodoSeparateFilters {
         checkItemsLeftCounter(4);
         checkCompletedCounter(3);
 
+        //edit task
+        editTask("active1", "active1 edited");
+        checkCompletedCounter(3);
+        checkItemsLeftCounter(4);
+
+        //delete task
+        deleteTask("active1 edited");
+        checkCompletedCounter(3);
+        checkItemsLeftCounter(3);
+
+        //toggle all
+        toggleAll();
+        taskList.filter(visible).shouldBe(empty);
+        checkItemsLeftCounter(0);
+        checkCompletedCounter(6);
+
+        //clear all
+        clearCompleted();
+        taskList.filter(visible).shouldBe(empty);
 
     }
 
     @Test
     public void testAtCompletedFilter() {
         //adding tasks
-        filterAll();
         addTask("do1");
         addTask("do2");
         addTask("do3");
         addTask("do4");
         addTask("do5");
+        filterAll();
         toggle("do1");
         toggle("do2");
 
@@ -144,5 +167,31 @@ public class TodoSeparateFilters {
         checkItemsLeftCounter(2);
         checkCompletedCounter(3);
 
+        //unmarking do3
+        toggle("do3");
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
+        checkCompletedCounter(2);
+        checkItemsLeftCounter(3);
+
+        //edit task
+        editTask("do2", "do2 edited");
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2 edited"));
+        checkCompletedCounter(2);
+        checkItemsLeftCounter(3);
+
+        //delete task
+        deleteTask("do2 edited");
+        checkCompletedCounter(1);
+        checkItemsLeftCounter(3);
+
+        //clear completed
+        filterActive();
+        toggleAll();
+        checkItemsLeftCounter(0);
+        checkCompletedCounter(4);
+        filterCompleted();
+        clearCompleted();
+        clearCompleted.shouldBe(hidden);
+        itemsLeft.shouldBe(hidden);
     }
 }

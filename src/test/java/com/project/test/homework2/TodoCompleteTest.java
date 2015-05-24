@@ -60,7 +60,7 @@ public class TodoCompleteTest {
 
     ElementsCollection taskList = $$("#todo-list li");
     SelenideElement clearCompleted = $("#clear-completed");
-    SelenideElement itemsLeft = $("#todo-count>strong");
+    //SelenideElement itemsLeft = $("#todo-count>strong");
 
 
     @Test
