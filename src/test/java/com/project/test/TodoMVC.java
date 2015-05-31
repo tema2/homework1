@@ -9,6 +9,10 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class TodoMVC {
 
+    public static ElementsCollection taskList = $$("#todo-list li");
+    public static SelenideElement clearCompleted = $("#clear-completed");
+    public static SelenideElement itemsLeft = $("#todo-count>strong");
+
     public static void addTask(String task) {
         $("#new-todo").setValue(task).pressEnter();
     }
@@ -30,8 +34,7 @@ public class TodoMVC {
     }
 
     public static void deleteTask(String task) {
-        taskList.findBy(text(task)).hover();
-        taskList.findBy(text(task)).find(".destroy").click();
+        taskList.findBy(text(task)).hover().find(".destroy").click();
     }
 
     public static void editTask(String oldTask, String newTask) {
@@ -53,11 +56,12 @@ public class TodoMVC {
     }
 
     public static void checkCompletedCounter(int number) {
-        $("#clear-completed").shouldHave(text(Integer.toString(number)));
+        $("#clear-completed").shouldHave(exactText(Integer.toString(number)));
+        /*
+        что если тут написать exactText вместо
+        $("#clear-completed").shouldHave(text("(" + Integer.toString(number) + ")"));
+        я не понимаю как кавычки спасают положение
+         */
     }
-
-    public static ElementsCollection taskList = $$("#todo-list li");
-    public static SelenideElement clearCompleted = $("#clear-completed");
-    public static SelenideElement itemsLeft = $("#todo-count>strong");
 
 }
