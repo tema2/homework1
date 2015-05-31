@@ -8,10 +8,6 @@
     <list default="true" id="f1c11adb-b3be-4b4a-9ca8-62b17c68ad8f" name="Default" comment="homework2 updated;">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/project/test/TestMethods.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/project/test/homework3/TodoSeparateFilters.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/project/test/homework2/TodoCompleteTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/project/test/homework2/TodoCompleteTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/project/test/TodoMVC.class" afterPath="$PROJECT_DIR$/target/test-classes/com/project/test/TodoMVC.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/project/test/homework2/TodoCompleteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/project/test/homework2/TodoCompleteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="todo_mvc_tests.iws" />
     <ignored path=".idea/workspace.xml" />

@@ -1,1 +1,4 @@
-todo_mvc_tests.iml
+/todo_mvc_tests.iml
+/.idea/*
+/build/*
+/target/*
