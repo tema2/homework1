@@ -1,5 +1,6 @@
 package com.project.test.homework3;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import static com.project.test.TodoMVC.*;
 
 
 public class TodoSeparateFiltersTests {
+
     @BeforeClass
     public static void openMvc() {
         open("http://todomvc.com/examples/troopjs_require/#/");
@@ -22,9 +24,13 @@ public class TodoSeparateFiltersTests {
 
     @Before
     public void clearData() {
-        executeJavaScript("localStorage.clear()");
         open("http://google.com/");
         open("http://todomvc.com/examples/troopjs_require/#/");
+    }
+
+    @After
+    public void clearCache() {
+        executeJavaScript("localStorage.clear()");
     }
 
     @Test
