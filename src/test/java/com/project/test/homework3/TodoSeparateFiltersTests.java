@@ -10,13 +10,13 @@ import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
-import static com.project.test.TestMethods.*;
+import static com.project.test.TodoMVC.*;
 
 
 
-public class TodoSeparateFilters {
+public class TodoSeparateFiltersTests {
     @BeforeClass
-    public static void clearCache() {
+    public static void openMvc() {
         open("http://todomvc.com/examples/troopjs_require/#/");
     }
 
@@ -29,7 +29,7 @@ public class TodoSeparateFilters {
 
     @Test
     public void testAtAllFilter() {
-        //adding tasks
+        //test preconditions
         addTask("do1");
         addTask("do2");
         addTask("do3");
@@ -49,20 +49,18 @@ public class TodoSeparateFilters {
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
         checkItemsLeftCounter(3);
         clearCompleted.shouldBe(visible);
-        checkCompletedCounter(2);
-        itemsLeft.shouldBe(visible);
 
         //toggle do3
         toggle("do3");
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
         checkItemsLeftCounter(2);
-        checkCompletedCounter(3);
+        clearCompleted.shouldBe(visible);
 
         //toggling all
         toggleAll();
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
-        checkCompletedCounter(5);
         checkItemsLeftCounter(0);
+        clearCompleted.shouldBe(visible);
         toggleAll();
 
         //edit task
@@ -85,7 +83,7 @@ public class TodoSeparateFilters {
 
     @Test
     public void testAtActiveFilter() {
-        //adding tasks
+        //test preconditions
         addTask("do1");
         addTask("do2");
         addTask("do3");
@@ -104,36 +102,41 @@ public class TodoSeparateFilters {
         taskList.filter(visible).shouldHave(exactTexts("do3", "do4", "do5"));
         checkItemsLeftCounter(3);
         clearCompleted.shouldBe(visible);
-        checkCompletedCounter(2);
+        filterAll();
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5"));
+        filterActive();
 
         //toggle do3
         toggle("do3");
         taskList.filter(visible).shouldHave(exactTexts("do4", "do5"));
         checkItemsLeftCounter(2);
-        checkCompletedCounter(3);
+        clearCompleted.shouldBe(visible);
 
         //adding tasks on Active filter page
         addTask("active1");
         addTask("active2");
         taskList.filter(visible).shouldHave(exactTexts("do4", "do5", "active1", "active2"));
         checkItemsLeftCounter(4);
-        checkCompletedCounter(3);
+        clearCompleted.shouldBe(visible);
 
         //edit task
         editTask("active1", "active1 edited");
-        checkCompletedCounter(3);
+        clearCompleted.shouldBe(visible);
         checkItemsLeftCounter(4);
 
         //delete task
         deleteTask("active1 edited");
-        checkCompletedCounter(3);
+        clearCompleted.shouldBe(visible);
         checkItemsLeftCounter(3);
+        filterAll();
+        taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3", "do4", "do5", "active2"));
+        filterActive();
 
         //toggle all
         toggleAll();
         taskList.filter(visible).shouldBe(empty);
         checkItemsLeftCounter(0);
-        checkCompletedCounter(6);
+        clearCompleted.shouldBe(visible);
 
         //clear all
         clearCompleted();
@@ -143,13 +146,12 @@ public class TodoSeparateFilters {
 
     @Test
     public void testAtCompletedFilter() {
-        //adding tasks
+        //test preconditions
         addTask("do1");
         addTask("do2");
         addTask("do3");
         addTask("do4");
         addTask("do5");
-        filterAll();
         toggle("do1");
         toggle("do2");
 
@@ -157,7 +159,7 @@ public class TodoSeparateFilters {
         filterCompleted();
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
         checkItemsLeftCounter(3);
-        checkCompletedCounter(2);
+        clearCompleted.shouldBe(visible);
 
         //marking do3 as complete
         filterAll();
@@ -165,30 +167,30 @@ public class TodoSeparateFilters {
         filterCompleted();
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2", "do3"));
         checkItemsLeftCounter(2);
-        checkCompletedCounter(3);
+        clearCompleted.shouldBe(visible);
 
         //unmarking do3
         toggle("do3");
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2"));
-        checkCompletedCounter(2);
+        clearCompleted.shouldBe(visible);
         checkItemsLeftCounter(3);
 
         //edit task
         editTask("do2", "do2 edited");
         taskList.filter(visible).shouldHave(exactTexts("do1", "do2 edited"));
-        checkCompletedCounter(2);
+        clearCompleted.shouldBe(visible);
         checkItemsLeftCounter(3);
 
         //delete task
         deleteTask("do2 edited");
-        checkCompletedCounter(1);
+        clearCompleted.shouldBe(visible);
         checkItemsLeftCounter(3);
 
         //clear completed
         filterActive();
         toggleAll();
         checkItemsLeftCounter(0);
-        checkCompletedCounter(4);
+        clearCompleted.shouldBe(visible);
         filterCompleted();
         clearCompleted();
         clearCompleted.shouldBe(hidden);
