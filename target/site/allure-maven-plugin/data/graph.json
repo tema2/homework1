@@ -1,0 +1,25 @@
+{
+  "testCases" : [ {
+    "uid" : "bac55a311fb4dee2",
+    "name" : "testCreateTask",
+    "title" : "Test create task",
+    "time" : {
+      "start" : 1433091016509,
+      "stop" : 1433091026174,
+      "duration" : 9665
+    },
+    "severity" : "NORMAL",
+    "status" : "FAILED"
+  }, {
+    "uid" : "3d00568e540d689f",
+    "name" : "testCreateTask",
+    "title" : "Test create task",
+    "time" : {
+      "start" : 1433090902495,
+      "stop" : 1433091016033,
+      "duration" : 113538
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

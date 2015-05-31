@@ -1,0 +1,25 @@
+{
+  "defectsList" : [ {
+    "title" : "Product defects",
+    "status" : "FAILED",
+    "defects" : [ {
+      "uid" : "1e01bdca1d7fd850",
+      "failure" : {
+        "message" : "TextsMismatch: \nActual: [task1 edited, task2, do1, do2, do3, do4]\nExpected: [do1, do2, do3, do4]\nCollection: #todo-list>li\nScreenshot: file:/home/tema/tasj/todo_mvc_tests/build/reports/tests/1433091025313.0.png\nTimeout: 4 s.",
+        "stackTrace" : null
+      },
+      "testCases" : [ {
+        "uid" : "bac55a311fb4dee2",
+        "name" : "testCreateTask",
+        "title" : "Test create task",
+        "time" : {
+          "start" : 1433091016509,
+          "stop" : 1433091026174,
+          "duration" : 9665
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    } ]
+  } ]
+}

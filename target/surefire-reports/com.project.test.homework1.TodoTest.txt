@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.project.test.homework1.TodoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.603 sec <<< FAILURE!
+testCreateTask(com.project.test.homework1.TodoTest)  Time elapsed: 9.593 sec  <<< FAILURE!
+com.codeborne.selenide.ex.TextsMismatch: 
+Actual: [task1 edited, task2, do1, do2, do3, do4]
+Expected: [do1, do2, do3, do4]
+Collection: #todo-list>li
+Screenshot: file:/home/tema/tasj/todo_mvc_tests/build/reports/tests/1433091025313.0.png
+Timeout: 4 s.
+	at com.codeborne.selenide.collections.ExactTexts.fail(ExactTexts.java:47)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:92)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:48)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:41)
+	at com.project.test.homework1.TodoTest.testCreateTask(TodoTest.java:29)
+

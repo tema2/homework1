@@ -1,0 +1,68 @@
+{
+  "time" : {
+    "start" : 1433090902442,
+    "stop" : 1433091028197,
+    "duration" : 125755
+  },
+  "testSuites" : [ {
+    "uid" : "e5c2192d181e971d",
+    "name" : "com.project.test.homework1.TodoTest",
+    "title" : "Todo test",
+    "time" : {
+      "start" : 1433091016509,
+      "stop" : 1433091028197,
+      "duration" : 11688
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 0,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 1,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "bac55a311fb4dee2",
+      "name" : "testCreateTask",
+      "title" : "Test create task",
+      "time" : {
+        "start" : 1433091016509,
+        "stop" : 1433091026174,
+        "duration" : 9665
+      },
+      "severity" : "NORMAL",
+      "status" : "FAILED"
+    } ]
+  }, {
+    "uid" : "b62154bd28cd3149",
+    "name" : "com.project.test.homework2.TodoCompleteTest",
+    "title" : "Todo complete test",
+    "time" : {
+      "start" : 1433090902442,
+      "stop" : 1433091026207,
+      "duration" : 123765
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "3d00568e540d689f",
+      "name" : "testCreateTask",
+      "title" : "Test create task",
+      "time" : {
+        "start" : 1433090902495,
+        "stop" : 1433091016033,
+        "duration" : 113538
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

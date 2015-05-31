@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1433090902442" stop="1433091026207" version="1.4.3">
+    <name>com.project.test.homework2.TodoCompleteTest</name>
+    <test-cases>
+        <test-case start="1433090902495" stop="1433091016033" status="passed">
+            <name>testCreateTask</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="JUnit"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
